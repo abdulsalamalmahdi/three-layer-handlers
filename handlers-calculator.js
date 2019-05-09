@@ -1,15 +1,17 @@
 function add() {
   // read and process user input
-  var first = document.getElementById('first-number').value;        
-  var second = document.getElementById('second-number').value;        
+  var[first,second] = ['first-number','second-number'].map(x => +document.getElementById(x).value) 
+    // pass user input through core logic
+           
 
-  // pass user input through core logic
-  
-  /* write a script to cast & add two numbers */
+   if ([first,second].some(x => isNaN(x))){
+     alert('one or both of the operands are not numbers');
+      return;  
+    }  /* write a script to cast & add two numbers */
   /* if either one casts to NaN, 
     assign a friendly message to a variable named 'result' */
   /* otherwise assign the result to a variable named 'result' */
-  var result = "the sum of " + first + ' and ' + second; // place-holder, delete this and start over
+  var result = parseInt(first) + parseInt(second); // place-holder, delete this and start over
 
   // report result to user
   var output_field = document.getElementById('result');
@@ -18,34 +20,40 @@ function add() {
 
 function subtract() {
   // read and process user input
-  var first = document.getElementById('first-number').value;        
-  var second = document.getElementById('second-number').value;        
-
-  // pass user input through core logic
   
-  /* write a script to cast & subtract two numbers */
-  /* if either one casts to NaN, 
-    assign a friendly message to a variable named 'result' */
-  /* otherwise assign the result to a variable named 'result' */
-  var result = "the difference between " + first + ' and ' + second; // place-holder, delete this and start over
-
-  // report result to user
+    // read and process user input
+    var[first,second] = ['first-number','second-number'].map(x => +document.getElementById(x).value) 
+      // pass user input through core logic
+             
+  
+     if ([first,second].some(x => isNaN(x))){
+       alert('one or both of the operands are not numbers');
+        return;  
+      }  /* write a script to cast & add two numbers */
+    /* if either one casts to NaN, 
+      assign a friendly message to a variable named 'result' */
+    /* otherwise assign the result to a variable named 'result' */
+    var result = parseInt(first) - parseInt(second); // place-holder, delete this and start over
+  
   var output_field = document.getElementById('result');
   output_field.innerHTML = result; 
 }
 
 function multiply() {
   // read and process user input
-  var first = document.getElementById('first-number').value;        
-  var second = document.getElementById('second-number').value;        
-
-  // pass user input through core logic
+  var[first,second] = ['first-number','second-number'].map(x => +document.getElementById(x).value) 
+      // pass user input through core logic
+             
   
-  /* write a script to cast & multiply two numbers */
-  /* if either one casts to NaN, 
-    assign a friendly message to a variable named 'result' */
-  /* otherwise assign the result to a variable named 'result' */
-  var result = "the product of " + first + ' and ' + second; // place-holder, delete this and start over
+     if ([first,second].some(x => isNaN(x))){
+       alert('one or both of the operands are not numbers');
+        return;  
+      }  /* write a script to cast & add two numbers */
+    /* if either one casts to NaN, 
+      assign a friendly message to a variable named 'result' */
+    /* otherwise assign the result to a variable named 'result' */
+    var result = parseInt(first) * parseInt(second); // place-holder, delete this and start over
+  
 
   // report result to user
   var output_field = document.getElementById('result');
@@ -54,17 +62,19 @@ function multiply() {
 
 function divide() {
    // read and process user input
-  var first = document.getElementById('first-number').value;        
-  var second = document.getElementById('second-number').value;        
-
-  // pass user input through core logic
+   var[first,second] = ['first-number','second-number'].map(x => +document.getElementById(x).value) 
+      // pass user input through core logic
+             
   
-  /* write a script to cast & divide two numbers */
-  /* if either one casts to NaN, 
-    assign a friendly message to a variable named 'result' */
-  /* otherwise assign the result to a variable named 'result' */
-  var result = "the quotient of " + first + ' and ' + second; // place-holder, delete this and start over
-
+     if ([first,second].some(x => isNaN(x))){
+       alert('one or both of the operands are not numbers');
+        return;  
+      }  /* write a script to cast & add two numbers */
+    /* if either one casts to NaN, 
+      assign a friendly message to a variable named 'result' */
+    /* otherwise assign the result to a variable named 'result' */
+    var result = parseInt(first) / parseInt(second); // place-holder, delete this and start over
+  
   // report result to user
   var output_field = document.getElementById('result');
   output_field.innerHTML = result;
